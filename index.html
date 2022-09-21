@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/tidy.min.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <div class="content">
+    <!-- Add your site or application content here -->
+    <h1>Order Form - Item Catelog DEMO</h1>
+    <button id="show-modal">Add PVC</button>
+
+    <div id="results">
+    </div>
+  </div>
+
+
+  <div class="modal-container hidden">
+    <div class="modal-form">
+      <div class="modal-header">
+        <h2>Add PVC Set</h2>
+      </div>
+      <div class="modal-body">
+        <form id="add-pvc">
+          
+
+          <div class="row">
+            <div class="field col-4">
+              <label>Diameter</label>
+              <select name="pvc-diameter">
+                <option value='075'>3/4 inch</option>
+                <option value='100'>1 inch</option>
+                <option value='125'>1 1/4 inch</option>
+                <option value='150'>1 1/2 inch</option>
+                <option value='200'>2 inch</option>
+                <option value='250'>2 1/2 inch</option>
+                <option value='300'>3 inch</option>
+                <option value='350'>3 1/2 inch</option>
+                <option value='400'>4 inch</option>
+                <option value='500'>5 inch</option>
+              </select>
+            </div>
+
+            <div class="field col-4">
+              <label>PVC Type</label>
+              <select name="pvc-type">
+                <option value='Sch-40'>Sch 40</option>
+                <option value='Sch-80'>Sch 80 </option>
+                <option value='DB-120'>DB-120</option>
+              </select>
+            </div>
+
+            <div class="field col-4">
+              <label>Total Length Needed</label>
+              <input type="number" name="pvc-length">
+            </div>
+
+          </div>
+
+          <div class="row mt">
+            <div class="field col-3">
+
+              <img class="field-img" src="img/pvc/pvc-coupling.png" />
+              <label>Coupling</label>
+              <input type="number" name="pvc-coupling" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-couplingdeep.png" />
+              <label>Coupling Deep</label>
+              <input type="number" name="pvc-couplingdeep" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-female.png" />
+              <label>Female Adapter</label>
+              <input type="number" name="pvc-female-adapter" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-male.png" />
+              <label>Male Adapter</label>
+              <input type="number" name="pvc-male-adapter" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-cap.png" />
+              <label>Cap</label>
+              <input type="number" name="pvc-cap" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-plug.png" />
+              <label>Plug</label>
+              <input type="number" name="pvc-plug" value="0">
+            </div>
+          </div>
+          <div class="row mt">
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-90.png" />
+              <label>90 deg - std</label>
+              <input type="number" name="pvc-e90s" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-9024.png" />
+              <label>90 deg - 24r</label>
+              <input type="number" name="pvc-e9024" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-9036.png" />
+              <label>90 deg - 36r</label>
+              <input type="number" name="pvc-e9036" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-45.png" />
+              <label>45 deg</label>
+              <input type="number" name="pvc-e45s" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-4524.png" />
+              <label>45 deg - 24r</label>
+              <input type="number" name="pvc-e4524" value="0">
+            </div>
+            <div class="field col-3">
+              <img class="field-img" src="img/pvc/pvc-4536.png" />
+              <label>45 deg - 36r</label>
+              <input type="number" name="pvc-e4536" value="0">
+            </div>
+          </div>
+
+          <div class="row mt">
+            <div class="actions">
+              <button class="submit" type="submit">Add set to order</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+
+@import "normalize.scss";
+@import "main.scss";
+@import "1_layout.scss";
+
+
+
+.content {
+  padding: 60px;
+
+}
+.modal-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  display: grid;
+  place-content: center;
+  font-family: helvetica, sans-serif;
+
+  .modal-form {
+    min-width: 300px;
+    min-height: 400px;
+    max-width: 900px;
+    max-height: 80vh;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #999;
+    padding: 50px 30px;
+    overflow-y: scroll;
+    transition: opacity .4s ease;
+    opacity: 1;
+  }
+
+
+  &.hidden {
+    display: none;
+
+    .modal-form {
+      opacity: 0;
+    }
+  }
+
+  form {
+    .field {
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      input, select {
+        display: block;
+        font-size: 16px;
+        padding: 8px 8px;
+        border-radius: 3px;
+        border: 1px solid #555;
+        line-height: 1;
+      }
+      .field-img {
+        aspect-ratio: 1 / 1;
+      }
+    }
+    button[type="submit"] {
+      background: linear-gradient(#4d90fe, #4787ed);
+      border: 1px solid #3079ed;
+      padding: 8px 12px;
+      border-radius: 3px;
+      color: white;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 25px;
+    
+    .col-4 {
+      width: 30%;
+      max-width: 30%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+    }
+    .col-3 {
+      width: 22%;
+      max-width: 23%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+}
